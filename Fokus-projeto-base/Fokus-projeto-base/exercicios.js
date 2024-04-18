@@ -16,3 +16,25 @@ let tempoFoco = 1500;
 let tempoDescansoCurto = 300;
 let tempoDescansolongo = 900;
 
+
+
+focoBt.addEventListener('click', () => {
+    focoBt.classList.add('ativo');
+    alterarContexto('foco')
+})
+
+curtoBt.addEventListener('click', () => {
+    curtoBt.classList.add('ativo');
+    alterarContexto('curto')
+})
+
+longoBt.addEventListener('click', () => {
+    longoBt.classList.add('ativo');
+    alterarContexto('longo')
+})
+
+function alterarContexto() {
+    botoes.forEach(function(contexto){
+        contexto.classList.remove('active');
+    })
+}
